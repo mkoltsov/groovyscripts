@@ -2,8 +2,7 @@
 import redis.clients.jedis.Jedis
 import groovy.json.JsonSlurper
 
-//def redisHost = 'localhost'
-def redisHost = '192.168.59.104'
+def redisHost = 'localhost'
 def jedis = new Jedis(redisHost)
 jedis.del('athlete')
 def athleteId = jedis.incr('athlete')
